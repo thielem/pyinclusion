@@ -22,7 +22,7 @@ pid	calibration     summary	    duration
 
 To generate the flowchart 
 ```python
-from py_inclusion.core import gen_graph
+from pyinclusion.core import gen_graph
 my_order = ['calibration', 'duration', 'summary'] # optional. The default ordering will be used if not specified
 gen_flowchart(sample_df, condition_order=my_order)
 ```
@@ -65,4 +65,4 @@ on from to easily to that.
 A sample figure will look like:
 
 
-![Sample_graph](./sample_graph.png)
+![Sample_graph](https://github.com/activityMonitoring/py_inclusion/blob/main/sample_graph.png?raw=true)

@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import pandas as pd
 import pytest
-from py_inclusion.core import gen_graph
+from pyinclusion.core import gen_graph
 
 
 def gen_test_df():
