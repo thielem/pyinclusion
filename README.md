@@ -1,4 +1,7 @@
 # inclusion_py
+[![Github all releases](https://img.shields.io/github/release/activityMonitoring/py_inclusion.svg)](https://github.com/activityMonitoring/py_inclusion/releases/)
+![CI](https://github.com/activityMonitoring/py_inclusion/workflows/CI/badge.svg)
+
 This package provides an easy way to generate the inclusion flowchart generation for participant inclusion for medical and epidemiology analyses. It will reduce the possibility of erroneous reporting in epi research as often the inclusion conditions may vary as the research progresses. Manual flowchart generation is neither efficient or reliable. 
 
 ## How to use 
@@ -56,4 +59,6 @@ work. To download svg, you can use [SVG Export](https://chrome.google.com/websto
 on from to easily to that.
 
 A sample figure will look like:
+
+
 ![Sample_graph](./sample_graph.png)
