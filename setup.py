@@ -70,7 +70,7 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/pypa/sampleproject',  # Optional
+    url='https://github.com/activityMonitoring/py_inclusion',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
@@ -92,7 +92,7 @@ setup(
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
+        'Topic :: SCIENTIFIC/ENGINEERING :: VISUALIZATION',
 
         # Pick your license as you wish
         'License :: OSI Approved :: MIT License',
@@ -187,9 +187,7 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
-        'Funding': 'https://donate.pypi.org',
-        'Say Thanks!': 'http://saythanks.io/to/example',
-        'Source': 'https://github.com/pypa/sampleproject/',
+        'Bug Reports': 'https://github.com/activityMonitoring/py_inclusion/issues',
+        'Source': 'https://github.com/activityMonitoring/py_inclusion',
     },
 )

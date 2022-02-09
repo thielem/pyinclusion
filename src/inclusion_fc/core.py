@@ -1,7 +1,6 @@
 from pyflowchart import *
 import numpy as np
 import pandas as pd
-
 """
 The construction of the flowchart diagram occurs in three steps
 1. We will compute the stats of subject remaining and excluded subjects
@@ -33,7 +32,7 @@ def filter_df(my_df, label_orders=None):
     for my_label in label_orders:
         my_count = np.sum(my_df[my_label] == True)
         my_remove = np.sum(my_df[my_label] == False)
-        current_counts.append(np.sum(my_count))
+        current_counts.append(my_count)
         remove_counts.append(my_remove)
         my_df = my_df[my_df[my_label] == True]
     return my_df, current_counts, remove_counts, label_orders
