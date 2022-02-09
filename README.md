@@ -58,7 +58,7 @@ cond83(no)->op84
 cond81(no)->op82
 ```
 The generated graph is based on `flowchart.js`, which can be used to render images in the web.
-You can then copy and paste the generated script into [flowchart.js](http://flowchart.js.org]) to generate SVG for your
+You can then copy and paste the generated script into [flowchart.js](http://flowchart.js.org) to generate SVG for your
 work. To download svg, you can use [SVG Export](https://chrome.google.com/webstore/detail/svg-export/naeaaedieihlkmdajjefioajbbdbdjgp?hl=en-GB)
 on from to easily to that.
 
