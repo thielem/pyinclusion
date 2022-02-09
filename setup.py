@@ -91,8 +91,8 @@ setup(
         'Development Status :: 3 - Alpha',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
-        'Topic :: SCIENTIFIC/ENGINEERING :: VISUALIZATION',
+        'Intended Audience :: Science/Research',
+        'Topic :: Scientific/Engineering :: Visualization',
 
         # Pick your license as you wish
         'License :: OSI Approved :: MIT License',
