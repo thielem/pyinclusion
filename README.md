@@ -1,9 +1,13 @@
-# inclusion_py
+# py_inclusion
 [![Github all releases](https://img.shields.io/github/release/activityMonitoring/py_inclusion.svg)](https://github.com/activityMonitoring/py_inclusion/releases/)
 ![CI](https://github.com/activityMonitoring/py_inclusion/workflows/CI/badge.svg)
 
 This package provides an easy way to generate the inclusion flowchart generation for participant inclusion for medical and epidemiology analyses. It will reduce the possibility of erroneous reporting in epi research as often the inclusion conditions may vary as the research progresses. Manual flowchart generation is neither efficient or reliable. 
 
+## How to install
+```shell
+pip install py_inclusion
+```
 ## How to use 
 `sample_flowchart.ipynb` has a nice example and the specific format required. We expect the input to be a `Pandas` dataframe of with at least a subject id column called `PID`. All the other columns should contain bolean variables, whehter a particular subject has met the condition based on that criteria
 ```
@@ -18,7 +22,7 @@ pid	calibration     summary	    duration
 
 To generate the flowchart 
 ```python
-from inclusion_py import *
+from py_inclusion.core import gen_graph
 my_order = ['calibration', 'duration', 'summary'] # optional. The default ordering will be used if not specified
 gen_flowchart(sample_df, condition_order=my_order)
 ```
