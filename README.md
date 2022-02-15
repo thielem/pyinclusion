@@ -24,7 +24,7 @@ To generate the flowchart
 ```python
 from pyinclusion.core import gen_graph
 my_order = ['calibration', 'duration', 'summary'] # optional. The default ordering will be used if not specified
-gen_flowchart(sample_df, condition_order=my_order)
+gen_graph(sample_df, condition_order=my_order)
 ```
 It will generate a script like this:
 ```

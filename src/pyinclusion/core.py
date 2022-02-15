@@ -79,7 +79,7 @@ def generate_nodes(current_counts, remove_counts, label_orders, start_node_text=
         my_exclude_text = get_node_name(my_exclude_text, to_remove_num,
                                         node_type='exclude', exclude_reason=label_orders[i])
 
-        cond_nodes.append(ConditionNode(my_condition_text))
+        cond_nodes.append(ConditionNode(my_condition_text, align_next=False))
         removed_nodes.append(OperationNode(my_exclude_text))
 
     cond_nodes.append(end_node)
