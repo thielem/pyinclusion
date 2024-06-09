@@ -38,16 +38,16 @@ def filter_df(my_df, label_orders=None):
     return my_df, current_counts, remove_counts, label_orders
 
 
-def get_node_name(node_text, n, node_type='start', exclude_reason=''):
-    # node_type = ['start', 'end', 'condition', exclude']
-    deafult_str = {
+def get_node_name(node_text, n, node_type='start', exclude_reason='', condition_label=''):
+    # node_type = ['start', 'end', 'condition', 'exclude']
+    default_str = {
         'start': "All subjects",
         'end': "Subjects included",
-        'condition':  "Fulfilled condtions",
-        'exclude': "Excluded due to "
+        'condition': condition_label,  # Default to the column name for conditions
+        'exclude': "Excluded"
     }
     if len(node_text) == 0:
-        node_text = deafult_str[node_type] + exclude_reason
+        node_text = default_str[node_type] + (f" due to {exclude_reason}" if node_type == 'exclude' and exclude_reason else "")
 
     node_text = (node_text + "\n n=%d" % n)
     return node_text
@@ -73,11 +73,10 @@ def generate_nodes(current_counts, remove_counts, label_orders, start_node_text=
         current_num = current_counts[i]
 
         my_condition_text = condition_text[i] if len(condition_text) > 0 else ""
-        my_exclude_text = exclusion_text[i] if len(condition_text) > 0 else ""
+        my_exclude_text = exclusion_text[i] if len(exclusion_text) > 0 else ""
 
-        my_condition_text = get_node_name(my_condition_text, current_num, node_type='condition')
-        my_exclude_text = get_node_name(my_exclude_text, to_remove_num,
-                                        node_type='exclude', exclude_reason=label_orders[i])
+        my_condition_text = get_node_name(my_condition_text, current_num, node_type='condition', condition_label=label_orders[i])
+        my_exclude_text = get_node_name(my_exclude_text, to_remove_num, node_type='exclude')
 
         cond_nodes.append(ConditionNode(my_condition_text, align_next=False))
         removed_nodes.append(OperationNode(my_exclude_text))
